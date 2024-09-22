@@ -9,6 +9,10 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { LoadGameListEffect } from './@state/effects/load-game-list.effect';
 import { GameStateReducer } from './@state/reducers/game.reducer';
+import { LoadOneGameByIdEffect } from './@state/effects/load-game-by-id.effect';
+import { CreateGameEffect } from './@state/effects/create-game.effect';
+import { LoadGamesByNameEffect } from './@state/effects/load-games-by-name.effect';
+import { UpdateGameEffect } from './@state/effects/update-game.effect';
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { GameStateReducer } from './@state/reducers/game.reducer';
     CommonModule,
     StoreModule.forFeature('gameState', GameStateReducer),
     EffectsModule.forFeature([
-      LoadGameListEffect
+      LoadGameListEffect,
+      LoadOneGameByIdEffect,
+      CreateGameEffect,
+      LoadGamesByNameEffect,
+      UpdateGameEffect
     ]),
     GameRoutingModule
   ],
