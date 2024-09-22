@@ -23,10 +23,6 @@ export class GameHttpService {
     return this.http.get<GameListModel[]>(APIBuilder(API.games.allByName, name));
   }
 
-  public getOneByName(name: string): Observable<GameListModel> {
-    return this.http.get<GameListModel>(APIBuilder(API.games.oneByName, name));
-  }
-
   public createGame(payload: CreateUpdateGameModel): Observable<string> {
     return this.http.post<string>(API.games.createGame, payload);
   }
