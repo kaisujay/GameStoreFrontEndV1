@@ -5,6 +5,10 @@ import { GameRoutingModule } from './game-routing.module';
 import { GameListComponent } from './game-list/game-list.component';
 import { GameHttpService } from './services/game.http.service';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { LoadGameListEffect } from './@state/effects/load-game-list.effect';
+import { GameStateReducer } from './@state/reducers/game.reducer';
 
 
 @NgModule({
@@ -13,6 +17,10 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
+    StoreModule.forFeature('gameState', GameStateReducer),
+    EffectsModule.forFeature([
+      LoadGameListEffect
+    ]),
     GameRoutingModule
   ],
   providers:[
