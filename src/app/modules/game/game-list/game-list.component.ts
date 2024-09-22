@@ -7,11 +7,9 @@ import { GameHttpService } from '../services/game.http.service';
   styleUrls: ['./game-list.component.css']
 })
 export class GameListComponent implements OnInit {
-  public constructor(public gameService: GameHttpService){}
+  public constructor(){}
   
   public ngOnInit(): void {
-    this.gameService.getGamesAll().subscribe(data => {
-      console.log(data)
-    });
+    
   }
 }
