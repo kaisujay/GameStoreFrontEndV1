@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { API } from '../../shared/api.constant';
+import { API } from '../../shared/utils/api.constant';
 import { Observable } from 'rxjs';
 import { GameListModel } from '../models/game-list.model';
-import { APIBuilder } from '../../shared/utils';
+import { APIBuilder } from '../../shared/utils/utils';
 import { CreateUpdateGameModel } from '../models/create-game.model';
 
 @Injectable()
