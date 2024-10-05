@@ -13,6 +13,7 @@ import { LoadOneGameByIdEffect } from './@state/effects/load-game-by-id.effect';
 import { CreateGameEffect } from './@state/effects/create-game.effect';
 import { LoadGamesByNameEffect } from './@state/effects/load-games-by-name.effect';
 import { UpdateGameEffect } from './@state/effects/update-game.effect';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { UpdateGameEffect } from './@state/effects/update-game.effect';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     StoreModule.forFeature('gameState', GameStateReducer),
     EffectsModule.forFeature([
       LoadGameListEffect,
