@@ -14,6 +14,8 @@ import { CreateGameEffect } from './@state/effects/create-game.effect';
 import { LoadGamesByNameEffect } from './@state/effects/load-games-by-name.effect';
 import { UpdateGameEffect } from './@state/effects/update-game.effect';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
+    InputSwitchModule,
+    FormsModule,
     StoreModule.forFeature('gameState', GameStateReducer),
     EffectsModule.forFeature([
       LoadGameListEffect,

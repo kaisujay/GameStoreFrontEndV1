@@ -12,6 +12,7 @@ import { LoadGamesAction } from '../@state/actions/game.action';
 })
 export class GameListComponent implements OnInit {
   public gameState$: Observable<GameState>;
+  checked: boolean = true;
   
   public constructor(private store$: Store){}
   
