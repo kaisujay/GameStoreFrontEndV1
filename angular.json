@@ -25,7 +25,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "node_modules/primeng/resources/themes/mdc-light-deeppurple/theme.css",
+                "bundleName": "light",
+                "inject": false
+              },
+              {
+                "input": "node_modules/primeng/resources/themes/mdc-dark-deeppurple/theme.css",
+                "bundleName": "dark",
+                "inject": false
+              }
             ],
             "scripts": []
           },
