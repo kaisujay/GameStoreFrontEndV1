@@ -8,7 +8,7 @@ import { LoadGamesAction } from '../@state/actions/game.action';
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
-  styleUrls: ['./game-list.component.css']
+  styleUrls: ['./game-list.component.scss']
 })
 export class GameListComponent implements OnInit {
   public gameState$: Observable<GameState>;
