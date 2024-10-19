@@ -1,8 +1,51 @@
-<nav>
-    <ul>
-      <li><a routerLink="/games-list">Home</a></li>
-      <li><a routerLink="/support">Support</a></li>
-      <!-- Add more links as needed -->
-    </ul>
-  </nav>
-<router-outlet></router-outlet>  
+<div class="navbar">
+    <div>
+        <a routerLink="/games-list">
+            <i class="fa-solid fa-shop"></i>
+            Store
+        </a>
+        <a routerLink="/support">
+            <i class="fa-solid fa-headset"></i>
+            Support
+        </a>
+        <div class="dropdown" (mouseenter)="dropdownOpenCatagories = true" (mouseleave)="dropdownOpenCatagories = false">
+            <a href="javascript:void(0);">
+                <i class="fa-solid fa-layer-group"></i>
+                Catagories
+                <ng-container *ngIf="dropdownOpenCatagories"><i class="fa-solid fa-angle-up"></i></ng-container>
+                <ng-container *ngIf="!dropdownOpenCatagories"><i class="fa-solid fa-angle-down"></i></ng-container>
+            </a>
+            <div class="dropdown-content dropdown-content-right"  
+                *ngIf="dropdownOpenCatagories">
+                <a><i class="fa-solid fa-check-double"></i> All</a>
+                <a><i class="fa-solid fa-desktop"></i> PC</a>
+                <a><i class="fa-brands fa-xbox"></i> Xbox</a>
+                <a><i class="fa-brands fa-playstation"></i> Play Station</a>
+            </div>
+        </div>
+        <a routerLink="/admin"><i class="fa-solid fa-screwdriver-wrench"></i> Admin</a>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div>
+        <div class="dropdown" (mouseenter)="dropdownOpenProfile = true" (mouseleave)="dropdownOpenProfile = false">
+            <a href="javascript:void(0);">
+                <i class="fa-solid fa-circle-user"></i> Player
+                <ng-container *ngIf="dropdownOpenProfile"><i class="fa-solid fa-angle-up"></i></ng-container>
+                <ng-container *ngIf="!dropdownOpenProfile"><i class="fa-solid fa-angle-down"></i></ng-container>
+            </a>
+            <div class="dropdown-content dropdown-content-left"
+                *ngIf="dropdownOpenProfile">
+                <a><i class="fa-solid fa-id-card"></i> My Profile</a>
+                <a><i class="fa-solid fa-heart"></i> WishList</a>
+                <a><i class="fa-solid fa-arrow-down-a-z"></i> Orders</a>
+                <a><i class="fa-solid fa-wallet"></i> Wallet</a>
+                <a><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+        <a><i class="fa-solid fa-moon"></i></a>
+        <a><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+</div>
+<router-outlet></router-outlet>

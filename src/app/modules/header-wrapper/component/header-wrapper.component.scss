@@ -1,58 +1,113 @@
-/* Header Styles */
-nav {
-    background-color: #333; /* Dark background */
-    padding: 1rem; /* Space around the menu */
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
-  }
-  
-  /* Menu List Styles */
-  ul {
-    list-style-type: none; /* Remove bullets */
-    display: flex; /* Horizontal list */
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif; /* Set font family */
     margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-  }
-  
-  /* Menu Item Styles */
-  li {
-    margin: 0 2px; /* Space between items */
-  }
-  
-  /* Link Styles */
-  a {
-    color: white; /* Text color */
+}
+
+/* Navbar container styling */
+.navbar {
+    background-color: #333038; /* Dark background for navbar */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    border-radius: 5px; /* Rounded corners for links */
+    padding: 1px; /* Add padding around the navbar */
+}
+
+/* Navbar link styling */
+.navbar a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    position: relative; /* Positioning context for pseudo-elements */
+}
+
+/* Link hover effects in the navbar */
+.navbar a:hover {
+    color: #b3b3b5; /* Change text color on hover */
+}
+
+/* General link styling */
+a {
+    color: white; /* White text color */
     text-decoration: none; /* Remove underline */
-    padding: 10px 15px; /* Space around links */
-    border-radius: 4px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth background change */
-  }
-  
-  /* Link Hover Effect */
-  a:hover {
-    background-color: #555; /* Lighter background on hover */
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column; /* Stack items vertically on small screens */
-      align-items: flex-start; /* Align items to the start */
-    }
-  
-    ul {
-      flex-direction: column; /* Vertical menu */
-      width: 100%; /* Full width */
-    }
-  
-    li {
-      width: 100%; /* Full width items */
-    }
-  
-    a {
-      width: 100%; /* Full width links */
-      text-align: center; /* Center text */
-    }
-  }
-  
+    padding: 10px 15px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+/* Link hover effects */
+a:hover {
+    background-color: #333038; /* Darker background on hover */
+}
+
+/* Search container styling */
+.search-container {
+    flex: 1; /* Allow container to grow */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Search input styling */
+.search-container input[type="text"] {
+    padding: 10px 15px; /* Padding inside the input */
+    width: 80%; /* Input takes 80% of container width */
+    border: 2px solid #333038; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+    padding-left: 40px; /* Space for search icon */
+    position: relative; /* Positioning context for background */
+    background: url('../../../../assets/icons/search-black.svg'); /* Background image */
+    background-repeat: no-repeat; /* Do not repeat background image */
+    background-position: 10px center; /* Position image */
+    background-color: white; /* Background color for input */
+    background-size: 20px; /* Size of the background image */
+}
+
+/* Search button hover effects */
+.search-container button:hover {
+    background-color: #ccc; /* Change background color on hover */
+}
+
+/* Dropdown container styling */
+.dropdown {
+    display: inline-block; /* Allow inline display */
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Positioning for dropdown */
+    background-color: #333038; /* Dark background */
+    color: white; /* White text color */
+    min-width: 160px; /* Minimum width for dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow effect */
+    z-index: 1; /* Ensure dropdown appears above other elements */
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+.dropdown-content-right {
+    margin: 8px 0 0 10px; /* Top, Right, Bottom, Left */
+}
+
+.dropdown-content-left {
+    margin: 8px 0 0 -10px; /* Top, Right, Bottom, Left */
+}
+
+/* Dropdown link styling */
+.dropdown-content a {
+    color: white; /* White text color for dropdown links */
+    padding: 12px 16px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display for dropdown links */
+}
+
+/* Dropdown link hover effects */
+.dropdown-content a:hover {
+    color: #b3b3b5; /* Change text color on hover */
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown when hovered */
+}

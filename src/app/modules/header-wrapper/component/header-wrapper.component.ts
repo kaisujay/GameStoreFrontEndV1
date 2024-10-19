@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderWrapperComponent {
 
+  public dropdownOpenCatagories = false;
+  public dropdownOpenProfile = false;
+
 }
