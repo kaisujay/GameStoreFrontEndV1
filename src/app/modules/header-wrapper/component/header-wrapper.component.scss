@@ -1,0 +1,58 @@
+/* Header Styles */
+nav {
+    background-color: #333; /* Dark background */
+    padding: 1rem; /* Space around the menu */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Menu List Styles */
+  ul {
+    list-style-type: none; /* Remove bullets */
+    display: flex; /* Horizontal list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Menu Item Styles */
+  li {
+    margin: 0 2px; /* Space between items */
+  }
+  
+  /* Link Styles */
+  a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Space around links */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background change */
+  }
+  
+  /* Link Hover Effect */
+  a:hover {
+    background-color: #555; /* Lighter background on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    ul {
+      flex-direction: column; /* Vertical menu */
+      width: 100%; /* Full width */
+    }
+  
+    li {
+      width: 100%; /* Full width items */
+    }
+  
+    a {
+      width: 100%; /* Full width links */
+      text-align: center; /* Center text */
+    }
+  }
+  
