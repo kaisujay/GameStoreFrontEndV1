@@ -9,15 +9,16 @@ import { ThemeService } from './modules/shared/services/theme.service';
 export class AppComponent {
   title = 'GameStoreFrontEndV1';
 
-  public constructor(private themeService: ThemeService){}
+  //Theme Dark and Light Switch
+  // public constructor(private themeService: ThemeService){}
 
-  public changeTheme(){
-    this.themeService.switchTheme();
-  }
+  // public changeTheme(){
+  //   this.themeService.switchTheme();
+  // }
 
-  public isDarkMode(){
-    const theme = this.themeService.getTheme();
+  // public isDarkMode(){
+  //   const theme = this.themeService.getTheme();
 
-    return theme.includes('dark') ? true : false;
-  }
+  //   return theme.includes('dark') ? true : false;
+  // }
 }
