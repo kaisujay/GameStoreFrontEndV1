@@ -11,7 +11,7 @@ import { SupportModule } from './modules/support/support.module';
   ],
   imports: [
     CommonModule,
-    // SupportModule,
+    SupportModule,
     HeaderWrapperRoutingModule
   ],
   exports:[HeaderWrapperComponent]

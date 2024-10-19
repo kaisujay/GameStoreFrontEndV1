@@ -10,6 +10,10 @@ const routes: Routes = [
   { 
     path: 'games-list', 
     loadChildren: () => import('./modules/game/game.module').then(m => m.GameModule) 
+  },
+  { 
+    path: 'support', 
+    loadChildren: () => import('./modules/header-wrapper/modules/support/support.module').then(m => m.SupportModule) 
   }
 ];
 
