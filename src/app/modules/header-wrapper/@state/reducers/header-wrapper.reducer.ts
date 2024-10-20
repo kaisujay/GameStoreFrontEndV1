@@ -8,11 +8,23 @@ export interface HeaderWrapperState {
         isLoading: boolean;
         isLoaded: boolean;
         isError: boolean;
+    },
+    allGamesByCategories: {
+        data: GameCategoriesModel[];
+        isLoading: boolean;
+        isLoaded: boolean;
+        isError: boolean;
     }
 }
 
 export const initialState: HeaderWrapperState = {
     allGameCategories: {
+        data: [],
+        isLoading: false,
+        isLoaded: false,
+        isError: false
+    },
+    allGamesByCategories: {
         data: [],
         isLoading: false,
         isLoaded: false,
@@ -38,7 +50,6 @@ export function HeaderWrapperStateReducer(state: HeaderWrapperState = initialSta
             return {
                 ...state,
                 allGameCategories: {
-                    ...state.allGameCategories,
                     data: action.payload,
                     isLoading: false,
                     isLoaded: true,
@@ -51,6 +62,39 @@ export function HeaderWrapperStateReducer(state: HeaderWrapperState = initialSta
                 ...state,
                 allGameCategories: {
                     ...state.allGameCategories,
+                    isLoading: false,
+                    isLoaded: false,
+                    isError: true
+                }
+            };
+
+        case HeaderWrapperActionTypes.LoadGamesByCategories:
+            return {
+                ...state,
+                allGamesByCategories: {
+                    data: null,
+                    isLoading: true,
+                    isLoaded: false,
+                    isError: false
+                }
+            };
+
+        case HeaderWrapperActionTypes.LoadGamesByCategoriesSuccess:
+            return {
+                ...state,
+                allGamesByCategories: {
+                    data: action.payload,
+                    isLoading: false,
+                    isLoaded: true,
+                    isError: false
+                }
+            };
+
+        case HeaderWrapperActionTypes.LoadGamesByCategoriesFailed:
+            return {
+                ...state,
+                allGamesByCategories: {
+                    ...state.allGamesByCategories,
                     isLoading: false,
                     isLoaded: false,
                     isError: true

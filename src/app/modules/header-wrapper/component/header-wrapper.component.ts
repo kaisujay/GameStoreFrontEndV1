@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
 import { getGameCategories, getHeaderWrapperState, HeaderWrapperState } from '../@state/reducers/header-wrapper.reducer';
-import { LoadGameCategoriesAction } from '../@state/actions/header-wrapper.action';
+import { LoadGameCategoriesAction, LoadGamesByCategoriesAction } from '../@state/actions/header-wrapper.action';
 import { GameCategoriesModel, Platforms } from '../models/header-wrapper.model';
 
 @Component({
@@ -31,6 +31,16 @@ export class HeaderWrapperComponent implements OnInit {
     this.store$.dispatch(new LoadGameCategoriesAction());
 
     this.gameCategories$ = this.store$.pipe(select(getGameCategories), map(item => item[this.categories]));
+  }
+
+  public clickCategories(key, value){
+    this.store$.dispatch(new LoadGamesByCategoriesAction(key));
+    
+    this.store$.pipe(select(getHeaderWrapperState)).subscribe(x => {
+      if (x.allGamesByCategories.isLoaded) {
+        console.log(x.allGamesByCategories.data);
+      }
+    })
   }
 
 }

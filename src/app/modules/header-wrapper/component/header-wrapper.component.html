@@ -22,16 +22,28 @@
                         <ng-container *ngFor="let entry of categoryEntries">
                             <!-- {{ entry.key }}: {{ entry.value }} -->
                             <ng-container *ngIf="entry?.key === Platforms.All">
-                                <a href="javascript:void(0);"><i class="fa-solid fa-check-double"></i> {{ entry.key }} ({{ entry.value }})</a>
+                                <a href="javascript:void(0);" (click)="clickCategories(entry.key, entry.value)">
+                                    <i class="fa-solid fa-check-double"></i> 
+                                    {{ entry.key }} ({{ entry.value }})
+                                </a>
                             </ng-container>
                             <ng-container *ngIf="entry?.key === Platforms.PC">
-                                <a href="javascript:void(0);"><i class="fa-solid fa-desktop"></i> {{ entry.key }} ({{ entry.value }})</a>
+                                <a href="javascript:void(0);" (click)="clickCategories(entry.key, entry.value)">
+                                    <i class="fa-solid fa-desktop"></i> 
+                                    {{ entry.key }} ({{ entry.value }})
+                                </a>
                             </ng-container>
                             <ng-container *ngIf="entry?.key === Platforms.Xbox">
-                                <a href="javascript:void(0);"><i class="fa-brands fa-xbox"></i> {{ entry.key }} ({{ entry.value }})</a>
+                                <a href="javascript:void(0);" (click)="clickCategories(entry.key, entry.value)">
+                                    <i class="fa-brands fa-xbox"></i> 
+                                    {{ entry.key }} ({{ entry.value }})
+                                </a>
                             </ng-container>
                             <ng-container *ngIf="entry?.key === Platforms.PlayStation">
-                                <a href="javascript:void(0);"><i class="fa-brands fa-playstation"></i> {{ entry.key }} ({{ entry.value }})</a>
+                                <a href="javascript:void(0);" (click)="clickCategories(entry.key, entry.value)">
+                                    <i class="fa-brands fa-playstation"></i> 
+                                    {{ entry.key }} ({{ entry.value }})
+                                </a>
                             </ng-container>
                         </ng-container>
                     </ng-container>

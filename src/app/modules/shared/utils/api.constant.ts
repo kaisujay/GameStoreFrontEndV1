@@ -9,5 +9,6 @@ export const API = {
     },
     gamePlatformType: {
         getGameCatagories: URL + 'api/GamePlatformType/GetGameCatagories',
+        getGameByCategoryName: URL + 'api/GamePlatformType/GetGameByCategory?catagoryName=:param'
     }
 };

@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { LoadGameCategoriesEffect } from './@state/effects/load-game-categories.effect';
 import { HeaderWrapperStateReducer } from './@state/reducers/header-wrapper.reducer';
+import { LoadGamesByCategoriesEffect } from './@state/effects/load-games-by-categories.effect';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderWrapperStateReducer } from './@state/reducers/header-wrapper.redu
     SupportModule,
     StoreModule.forFeature('headerWrapperState', HeaderWrapperStateReducer),
     EffectsModule.forFeature([
-      LoadGameCategoriesEffect
+      LoadGameCategoriesEffect,
+      LoadGamesByCategoriesEffect
     ]),
     HeaderWrapperRoutingModule
   ],
