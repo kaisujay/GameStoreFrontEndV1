@@ -19,6 +19,9 @@ body {
     color: white; /* White text color for links */
     text-decoration: none; /* Remove underline from links */
     position: relative; /* Positioning context for pseudo-elements */
+    padding: 10px 15px; /* Padding around links */
+    // border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and color */
 }
 
 /* Link hover effects in the navbar */
@@ -26,18 +29,11 @@ body {
     color: #b3b3b5; /* Change text color on hover */
 }
 
+
 /* General link styling */
 a {
     color: white; /* White text color */
     text-decoration: none; /* Remove underline */
-    padding: 10px 15px; /* Padding around links */
-    border-radius: 5px; /* Rounded corners for links */
-    transition: background-color 0.3s; /* Smooth transition for background */
-}
-
-/* Link hover effects */
-a:hover {
-    background-color: #333038; /* Darker background on hover */
 }
 
 /* Search container styling */
@@ -56,10 +52,7 @@ a:hover {
     outline: none; /* Remove default outline */
     transition: border-color 0.3s ease; /* Smooth border color transition */
     padding-left: 40px; /* Space for search icon */
-    position: relative; /* Positioning context for background */
-    background: url('../../../../assets/icons/search-black.svg'); /* Background image */
-    background-repeat: no-repeat; /* Do not repeat background image */
-    background-position: 10px center; /* Position image */
+    background: url('../../../../assets/icons/search-black.svg') no-repeat 10px center; /* Background image */
     background-color: white; /* Background color for input */
     background-size: 20px; /* Size of the background image */
 }
@@ -110,4 +103,15 @@ a:hover {
 /* Show dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block; /* Show dropdown when hovered */
+}
+
+/* Active link styling */
+.navbar a.active {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background for active link */
+    color: #cda7ff; /* Change text color to a gold/yellow for active link */
+    border-bottom: 2px solid #cda7ff; /* Add a bottom border to indicate active */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
 }
