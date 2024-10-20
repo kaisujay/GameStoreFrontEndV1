@@ -44,7 +44,9 @@
                 <a><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
             </div>
         </div>
-        <a><i class="fa-solid fa-moon"></i></a>
+        <a (click)="toggleTheme()">
+            <i [ngClass]="isDarkTheme ? 'fa-solid fa-mountain-sun' : 'fa-solid fa-cloud-moon'"></i>
+        </a>
         <a><i class="fa-solid fa-cart-shopping"></i></a>
     </div>
 </div>

@@ -9,5 +9,11 @@ export class HeaderWrapperComponent {
 
   public dropdownOpenCatagories = false;
   public dropdownOpenProfile = false;
+  public isDarkTheme = false;
+
+  public toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
+    document.body.classList.toggle('dark', this.isDarkTheme);
+  }
 
 }

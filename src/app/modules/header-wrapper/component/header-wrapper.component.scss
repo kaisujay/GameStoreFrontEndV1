@@ -6,17 +6,18 @@ body {
 
 /* Navbar container styling */
 .navbar {
-    background-color: #333038; /* Dark background for navbar */
+    background-color: var(--primary-navbar-bg-color); /* Dark background for navbar */
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     justify-content: space-between; /* Space items evenly */
     border-radius: 5px; /* Rounded corners for links */
     padding: 1px; /* Add padding around the navbar */
+    box-shadow: var(--primary-navbar-box-shadow); /* Shadow effect */
 }
 
 /* Navbar link styling */
 .navbar a {
-    color: white; /* White text color for links */
+    color: var(--primary-navbar-a-color); /* White text color for links */
     text-decoration: none; /* Remove underline from links */
     position: relative; /* Positioning context for pseudo-elements */
     padding: 10px 15px; /* Padding around links */
@@ -26,13 +27,12 @@ body {
 
 /* Link hover effects in the navbar */
 .navbar a:hover {
-    color: #b3b3b5; /* Change text color on hover */
+    color: var(--primary-navbar-a-active-hover-color); /* Change text color on hover */
 }
-
 
 /* General link styling */
 a {
-    color: white; /* White text color */
+    // color: white; /* White text color */
     text-decoration: none; /* Remove underline */
 }
 
@@ -47,19 +47,20 @@ a {
 .search-container input[type="text"] {
     padding: 10px 15px; /* Padding inside the input */
     width: 80%; /* Input takes 80% of container width */
-    border: 2px solid #333038; /* Border color */
+    border: 2px solid var(--primary-navbar-bg-color); /* Border color */
     border-radius: 5px; /* Rounded corners */
     outline: none; /* Remove default outline */
     transition: border-color 0.3s ease; /* Smooth border color transition */
     padding-left: 40px; /* Space for search icon */
     background: url('../../../../assets/icons/search-black.svg') no-repeat 10px center; /* Background image */
-    background-color: white; /* Background color for input */
+    background-color: var(--primary-navbar-textbox-color); /* Background color for input */
     background-size: 20px; /* Size of the background image */
+    color: var(--primary-navbar-placeholder-color);
 }
 
-/* Search button hover effects */
-.search-container button:hover {
-    background-color: #ccc; /* Change background color on hover */
+input[type="text"]::placeholder {
+    color: var(--primary-navbar-placeholder-color); /* Example placeholder color */
+    opacity: 1;  /* Full opacity */
 }
 
 /* Dropdown container styling */
@@ -71,10 +72,10 @@ a {
 .dropdown-content {
     display: none; /* Hide dropdown content by default */
     position: absolute; /* Positioning for dropdown */
-    background-color: #333038; /* Dark background */
-    color: white; /* White text color */
+    background-color: var(--primary-navbar-bg-color); /* Dark background */
+    color: var(--primary-navbar-a-color); /* White text color */
     min-width: 160px; /* Minimum width for dropdown */
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow effect */
+    box-shadow: var(--primary-navbar-box-shadow); /* Shadow effect */
     z-index: 1; /* Ensure dropdown appears above other elements */
     border-radius: 5px; /* Rounded corners for links */
 }
@@ -89,7 +90,7 @@ a {
 
 /* Dropdown link styling */
 .dropdown-content a {
-    color: white; /* White text color for dropdown links */
+    color: var(--primary-navbar-a-color); /* White text color for dropdown links */
     padding: 12px 16px; /* Padding for dropdown links */
     text-decoration: none; /* Remove underline */
     display: block; /* Block display for dropdown links */
@@ -97,7 +98,7 @@ a {
 
 /* Dropdown link hover effects */
 .dropdown-content a:hover {
-    color: #b3b3b5; /* Change text color on hover */
+    color: var(--primary-navbar-a-active-hover-color); /* Change text color on hover */
 }
 
 /* Show dropdown content on hover */
@@ -107,11 +108,11 @@ a {
 
 /* Active link styling */
 .navbar a.active {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background for active link */
-    color: #cda7ff; /* Change text color to a gold/yellow for active link */
-    border-bottom: 2px solid #cda7ff; /* Add a bottom border to indicate active */
+    background-color: var(--primary-navbar-bg-color-transparent);  /* Slightly lighter background for active link */
+    color: var(--primary-navbar-a-active-hover-color); /* Change text color to a gold/yellow for active link */
+    border-bottom: 2px solid var(--primary-navbar-a-active-hover-color); /* Add a bottom border to indicate active */
 }
 
 .navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background on hover */
+    background-color: var(--primary-navbar-bg-color-transparent);  /* Slightly lighter background on hover */
 }

@@ -2,3 +2,23 @@
 
 @import "primeicons/primeicons.css";
 @import "primeng/resources/primeng.css";
+
+body {
+    --primary-navbar-bg-color: #f1e3fc;
+    --primary-navbar-a-color: #340d4c;
+    --primary-navbar-textbox-color: #faf6fc;
+    --primary-navbar-placeholder-color: #340d4c;
+    --primary-navbar-a-active-hover-color: #985AE1;
+    --primary-navbar-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Added box-shadow as a variable */
+    --primary-navbar-bg-color-transparent: rgba(255, 255, 255, 0.1);
+
+    &.dark {
+        --primary-navbar-bg-color: #340d4c;
+        --primary-navbar-a-color: #f1e3fc;
+        --primary-navbar-textbox-color: #f1e3fc;
+        --primary-navbar-placeholder-color: #340d4c;
+        --primary-navbar-a-active-hover-color: #985AE1;
+        --primary-navbar-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Optional for dark mode */
+        --primary-navbar-bg-color-transparent: rgba(255, 255, 255, 0.1);
+    }
+}
