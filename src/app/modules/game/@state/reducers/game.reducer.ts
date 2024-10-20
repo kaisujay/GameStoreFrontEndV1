@@ -75,7 +75,7 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 allGames: {
-                    ...state.allGames,
+                    data: null,
                     isLoading: true,
                     isLoaded: false,
                     isError: false
@@ -86,7 +86,6 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 allGames: {
-                    ...state.allGames,
                     data: action.payload,
                     isLoading: false,
                     isLoaded: true,
@@ -109,7 +108,7 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 gameById: {
-                    ...state.gameById,
+                    data: null,
                     isLoading: true,
                     isLoaded: false,
                     isError: false
@@ -120,7 +119,6 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 gameById: {
-                    ...state.gameById,
                     data: action.payload,
                     isLoading: false,
                     isLoaded: true,
@@ -143,7 +141,7 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 gamesByName: {
-                    ...state.gamesByName,
+                    data: null,
                     isLoading: true,
                     isLoaded: false,
                     isError: false
@@ -154,7 +152,6 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 gamesByName: {
-                    ...state.gamesByName,
                     data: action.payload,
                     isLoading: false,
                     isLoaded: true,
@@ -177,7 +174,7 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 createGame: {
-                    ...state.createGame,
+                    data: null,
                     isSaving: true,
                     isSaved: false,
                     isError: false
@@ -188,7 +185,6 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 createGame: {
-                    ...state.createGame,
                     data: action.payload,
                     isSaving: true,
                     isSaved: false,
@@ -211,7 +207,7 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 updateGame: {
-                    ...state.updateGame,
+                    data: null,
                     isSaving: true,
                     isSaved: false,
                     isError: false
@@ -222,7 +218,6 @@ export function GameStateReducer(state: GameState = initialState, action: GameAc
             return {
                 ...state,
                 updateGame: {
-                    ...state.updateGame,
                     data: action.payload,
                     isSaving: true,
                     isSaved: false,
