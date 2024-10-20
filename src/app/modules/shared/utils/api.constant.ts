@@ -6,5 +6,8 @@ export const API = {
         allByName: URL + 'api/Game/GetGamesByName/:param',
         createGame: URL + 'api/Game/CreateGame',
         updateGame: URL + 'api/Game/UpdateGame/:param',
+    },
+    gamePlatformType: {
+        getGameCatagories: URL + 'api/GamePlatformType/GetGameCatagories',
     }
 };
